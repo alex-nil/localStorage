@@ -6,10 +6,9 @@ let myBtn = document.getElementById("myBtn");
 document.getElementById("usrName").value = localStorage.getItem("name");
 //Eventlistener som återskapar användares senaste sparade uppgifter
 myBtn.addEventListener("click", skapaLs);
-if (document.getElementById("usrName").value) { //Om det finns value i localstorage så kommer allt skrivas ut på sidan.
-    console.log("yes");
-    skapaLs(); //hämtar funktionen som skapar div och skriver ut localstorage "name"
 
+if (document.getElementById("usrName").value) { //Om det finns value i localstorage så kommer allt skrivas ut på sidan.
+    skapaLs(); //hämtar funktionen som skapar div och skriver ut localstorage "name"
 }
 
 
@@ -36,8 +35,5 @@ function skapaLs () {
         document.getElementById("usrName").value = "";  //Återställer input text
         localStorage.removeItem("name");                //Tar bort value från localstorage
         let ersDiv = document.getElementById("div1").remove();  //Tar bort div från sidan
-        
-
-
     }
 }
